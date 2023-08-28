@@ -126,8 +126,8 @@ header span {
 
 .cta {
   margin-top: var(--space-m);
-  display: flex;
-  align-items: center;
+  display: grid;
+  grid-template-columns: 200px 150px;
   gap: var(--space-xs);
 }
 
@@ -138,6 +138,10 @@ header span {
   color: #eff0f2;
   font-weight: 600;
   transition: filter 0.2s ease-in-out;
+
+  display: flex;
+  align-items: center;
+  gap: var(--space-3xs);
 }
 
 .btn-primary:hover {
@@ -160,20 +164,19 @@ header span {
 }
 
 .socials-container {
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
   gap: var(--space-xs);
   margin-bottom: var(--space-m);
 }
 
 .socials-container a {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-items: center;
   align-items: center;
-  justify-content: center;
-  gap: var(--space-3xs);
   padding: var(--space-3xs);
-  padding: var(--space-xs) var(--space-s);
+  padding: var(--space-2xs) 0;
   border-radius: 6px;
   background-color: #e6e6e6;
   transition: background-color 0.2s ease-in-out;
@@ -181,4 +184,20 @@ header span {
 
 .socials-container a:hover {
   background-color: #e1faea;
+}
+
+@media (max-width: 500px) {
+  .main-layout {
+    width: 100%;
+    padding: 1rem;
+  }
+
+  .badge-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .cta,
+  .socials-container {
+    grid-template-columns: 1fr;
+  }
 }
