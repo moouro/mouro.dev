@@ -185,6 +185,20 @@ header span {
 .socials-container a:hover {
   background-color: #e1faea;
 }
+hr {
+  border: 1px solid #e6e6e6;
+  margin-bottom: var(--space-m);
+}
+.copy {
+  align-items: center;
+  font-size: var(--fs-1);
+  margin-top: var(--space-xl);
+  text-align: center;
+  background-color: #1751d0;
+  color: #e6e6e6;
+  padding: var(--space-xs) var(--space-s);
+  border-radius: 6px;
+}
 
 @media (max-width: 500px) {
   .main-layout {
